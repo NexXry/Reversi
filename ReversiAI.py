@@ -1,5 +1,9 @@
+from Reversi import Board
+
+
 class ReversiAI:
-    def __init__(self, depth=3):
+    def __init__(self, color=Board._BLACK, depth=3):
+        self.color = color
         self.depth = depth
 
     def minimax(self, board, depth, alpha, beta, maximizing_player):
@@ -30,46 +34,35 @@ class ReversiAI:
             return min_eval
 
     def count_pawns(self, board):
-        player_pawns = 0
-        opponent_pawns = 0
-        for i in range(board._boardsize):
-            for j in range(board._boardsize):
-                if board._board[i][j] == board._BLACK:
-                    player_pawns += 1
-                elif board._board[i][j] == board._WHITE:
-                    opponent_pawns += 1
+        player_pawns, opponent_pawns = board.get_nb_pieces()
         return player_pawns, opponent_pawns
 
     def count_corners(self, board):
         player_corners = 0
         opponent_corners = 0
-        if board._board[0][0] == board._BLACK:
-            player_corners += 1
-        elif board._board[0][0] == board._WHITE:
-            opponent_corners += 1
-        if board._board[0][7] == board._BLACK:
-            player_corners += 1
-        elif board._board[0][7] == board._WHITE:
-            opponent_corners += 1
-        if board._board[7][0] == board._BLACK:
-            player_corners += 1
-        elif board._board[7][0] == board._WHITE:
-            opponent_corners += 1
-        if board._board[7][7] == board._BLACK:
-            player_corners += 1
-        elif board._board[7][7] == board._WHITE:
-            opponent_corners += 1
+        corners = [(0, 0), (0, 9), (9, 0), (9, 9)]  # Coordonnées des coins pour un plateau de taille 10
+
+        for x, y in corners:
+            if board._board[x][y] == board._BLACK:
+                player_corners += 1
+            elif board._board[x][y] == board._WHITE:
+                opponent_corners += 1
+
         return player_corners, opponent_corners
 
     def evaluate_stability(self, board):
         player_stability = 0
         opponent_stability = 0
+
         for i in range(board._boardsize):
             for j in range(board._boardsize):
-                if board._board[i][j] == board._BLACK:
-                    player_stability += 1
-                elif board._board[i][j] == board._WHITE:
-                    opponent_stability += 1
+                if i == 0 or i == board._boardsize - 1 or j == 0 or j == board._boardsize - 1:
+                    # Pièce sur un bord ou dans un coin
+                    if board._board[i][j] == board._BLACK:
+                        player_stability += 1
+                    elif board._board[i][j] == board._WHITE:
+                        opponent_stability += 1
+
         return player_stability, opponent_stability
 
     def evaluate_mobility(self, board):
@@ -97,7 +90,7 @@ class ReversiAI:
         mobility = player_mobility - opponent_mobility
 
         # Ponderation des différents facteurs
-        score = 10 * pawn_difference + 80 * corner_control + 50 * stability + 30 * mobility
+        score = 50 * pawn_difference + 100 * corner_control + 70 * stability + 50 * mobility
         return score
 
     def find_best_move(self, board):

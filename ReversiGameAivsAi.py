@@ -16,7 +16,6 @@ class ReversiGame:
         while not self.board.is_game_over():
             print(self.board)
             move = None
-
             if self.current_player == Board._BLACK:
                 move = self.ai_black.find_best_move(self.board)
             else:
@@ -36,7 +35,3 @@ class ReversiGame:
             print("Le vainqueur est l'IA NOIRE avec", nb_black, "pièces contre", nb_white, "pour l'IA BLANCHE.")
         else:
             print("La partie se termine par un match nul !")
-
-
-game = ReversiGame(color=Board._BLACK)
-game.play_game()

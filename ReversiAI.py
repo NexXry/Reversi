@@ -1,11 +1,13 @@
 from Reversi import Board
 
 
+# Classe qui implémente l'IA
 class ReversiAI:
     def __init__(self, color=Board._BLACK, depth=3):
         self.color = color
         self.depth = depth
 
+    # Fonction minimax avec élagage alpha-beta
     def minimax(self, board, depth, alpha, beta, maximizing_player):
         if depth == 0 or board.is_game_over():
             return self.evaluate_board(board)
@@ -33,10 +35,12 @@ class ReversiAI:
                     break
             return min_eval
 
+    # Fonction qui réalise le compte des pions du plateau
     def count_pawns(self, board):
         player_pawns, opponent_pawns = board.get_nb_pieces()
         return player_pawns, opponent_pawns
 
+    # Fonction qui réalise le compte des pions du plateau dans les coins en fonction de la couleur du joueur
     def count_corners(self, board):
         player_corners = 0
         opponent_corners = 0
@@ -50,6 +54,7 @@ class ReversiAI:
 
         return player_corners, opponent_corners
 
+    # Fonction qui évalue la stabilité (Note sur la difficulté à prendre le pion) des pions du plateau
     def evaluate_stability(self, board):
         player_stability = 0
         opponent_stability = 0
@@ -65,6 +70,7 @@ class ReversiAI:
 
         return player_stability, opponent_stability
 
+    # Fonction qui évalue la mobilité (Note sur le nombre de coups possibles) des pions du plateau
     def evaluate_mobility(self, board):
         player_mobility = 0
         opponent_mobility = 0
@@ -76,6 +82,7 @@ class ReversiAI:
                     opponent_mobility += board.testAndBuild_ValidMove(board._BLACK, i, j) if 1 else 0
         return player_mobility, opponent_mobility
 
+    # Fonction qui évalue le plateau en fonction de différents facteurs (nombre de pions, stabilité, mobilité) ce sonts les heuristiques
     def evaluate_board(self, board):
         player_pawns, opponent_pawns = self.count_pawns(board)
         pawn_difference = player_pawns - opponent_pawns
@@ -93,6 +100,7 @@ class ReversiAI:
         score = 50 * pawn_difference + 100 * corner_control + 70 * stability + 50 * mobility
         return score
 
+    # Fonction qui trouve le meilleur coup possible en fonction de l'évaluation du plateau grave à la fonction minimax et l'élagage alpha-beta
     def find_best_move(self, board):
         best_move = None
         best_value = float('-inf')

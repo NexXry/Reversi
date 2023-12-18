@@ -1,7 +1,9 @@
-from JoliReversi import Board
+# from JoliReversi import Board // Ajout des numéros de colonnes en haut et des numéros de lignes à gauche
+from Reversi import Board
 from ReversiAI import ReversiAI
 
 
+# Classe qui implémente le jeu AI VERS PLAYER
 class ReversiGame:
     def __init__(self, color=Board._BLACK):
         self.board = Board(boardsize=10)
@@ -32,9 +34,6 @@ class ReversiGame:
         print(self.display_winner(self))
 
     def get_human_move(self, player):
-        print("C'est à vous de jouer, joueur", player
-              , ". Voici les coups possibles : "
-              , self.board.legal_moves())
         while True:
             move = input("Entrez votre coup (format ligne,colonne) ou '' pour passer : ")
             if move == '':
@@ -60,8 +59,3 @@ class ReversiGame:
             print("L'IA a gagné avec", nb_black, "pièces contre", nb_white, "pour vous.")
         else:
             print("La partie se termine par un match nul !")
-
-
-# Pour démarrer le jeu
-game = ReversiGame(color=Board._BLACK)
-game.play_game()

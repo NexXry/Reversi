@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
- <img src="https://www.miage.fr/ressources-et-documentation/logos/" alt="MIAGE" width="200">
+ <img src="http://www.miage.fr/wp-content/uploads/2020/02/MIAGE_LOGO-SEUL_COULEURS.png" alt="MIAGE" width="200">
     <br>
   CASTEX Nicolas & DAVAINE Louis-Amand
     <br>

@@ -26,7 +26,20 @@
 ## Description :
 
 * ReversiMasterAI est une intelligence artificielle conçue pour le jeu de Reversi. Cette IA utilise une combinaison de techniques avancées pour optimiser ses performances.
-  
+
+* Évolution de notre IA :
+
+- Notre première version de l'IA utilisait uniquement l'algorithme Minimax sans élagage. Bien qu'elle fût capable de choisir des coups stratégiques, sa performance était limitée par le grand nombre de scénarios qu'elle devait évaluer, rendant l'IA moins efficace, surtout à des profondeurs de recherche élevées. En intégrant l'élagage Alpha-Beta, nous avons pu significativement augmenter la vitesse de l'IA tout en maintenant, voire en améliorant, la qualité des coups joués. Cette optimisation a été un tournant dans le développement de notre IA, la rendant non seulement plus rapide mais aussi plus stratégique et compétitive.
+
+* Explications de MinMax avec Élagage :
+ - Minimax est un algorithme de décision utilisé dans la théorie des jeux pour minimiser la perte potentielle dans un scénario de pire cas. Dans le contexte du Reversi, cela signifie choisir le coup qui maximise le potentiel de gain du joueur tout en minimisant l'avantage possible de l'adversaire.
+
+ - L'élagage Alpha-Beta est une optimisation de Minimax qui élimine les branches de l'arbre de décision qui ne vont pas influencer la décision finale. Cela se fait en maintenant deux valeurs, Alpha et Beta :
+
+ - Alpha représente la valeur minimale que le joueur maximisant est assuré.
+ - Beta représente la valeur maximale que le joueur minimisant est assuré.
+
+- Si, à un certain point, il est évident qu'une branche ne va pas influencer le résultat final (par exemple, si Alpha est supérieur à Beta), cette branche est coupée de l'arbre de recherche, ce qui réduit considérablement le nombre de scénarios à évalue
 ## Points Forts :
 
 * Minimax avec Élagage Alpha-Beta :

@@ -18,9 +18,10 @@
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
-<h4 align="center">
+
 ![screenshot](https://th.bing.com/th/id/R.5ac3f08cbe0822ac9d2db9993ae5801c?rik=L5gatnBOtzD%2f2A&riu=http%3a%2f%2fwww.bbcmicro.co.uk%2fgameimg%2fscreenshots%2f2648%2fDisc117-Reversi.jpg&ehk=d3Z3%2b9W9j7TZT6v10NLOGN2%2b%2ftIlmMUWZCr6jB2P%2byM%3d&risl=&pid=ImgRaw&r=0)
-</h4>
+
+
 ## Key Features
 
 * LivePreview - Make changes, See changes

@@ -29,7 +29,7 @@
 
 * Évolution de notre IA :
 
-- Notre première version de l'IA utilisait uniquement l'algorithme Minimax sans élagage. Bien qu'elle fût capable de choisir des coups stratégiques, sa performance était limitée par le grand nombre de scénarios qu'elle devait évaluer, rendant l'IA moins efficace, surtout à des profondeurs de recherche élevées. En intégrant l'élagage Alpha-Beta, nous avons pu significativement augmenter la vitesse de l'IA tout en maintenant, voire en améliorant, la qualité des coups joués. Cette optimisation a été un tournant dans le développement de notre IA, la rendant non seulement plus rapide mais aussi plus stratégique et compétitive.
+  - Notre première version de l'IA utilisait uniquement l'algorithme Minimax sans élagage. Bien qu'elle fût capable de choisir des coups stratégiques, sa performance était limitée par le grand nombre de scénarios qu'elle devait évaluer, rendant l'IA moins efficace, surtout à des profondeurs de recherche élevées. En intégrant l'élagage Alpha-Beta, nous avons pu significativement augmenter la vitesse de l'IA tout en maintenant, voire en améliorant, la qualité des coups joués. Cette optimisation a été un tournant dans le développement de notre IA, la rendant non seulement plus rapide mais aussi plus stratégique et compétitive.
 
 * Explications de MinMax avec Élagage :
  - Minimax est un algorithme de décision utilisé dans la théorie des jeux pour minimiser la perte potentielle dans un scénario de pire cas. Dans le contexte du Reversi, cela signifie choisir le coup qui maximise le potentiel de gain du joueur tout en minimisant l'avantage possible de l'adversaire.

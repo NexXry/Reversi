@@ -23,26 +23,28 @@
 <img src="https://th.bing.com/th/id/R.5ac3f08cbe0822ac9d2db9993ae5801c?rik=L5gatnBOtzD%2f2A&riu=http%3a%2f%2fwww.bbcmicro.co.uk%2fgameimg%2fscreenshots%2f2648%2fDisc117-Reversi.jpg&ehk=d3Z3%2b9W9j7TZT6v10NLOGN2%2b%2ftIlmMUWZCr6jB2P%2byM%3d&risl=&pid=ImgRaw&r=0"></img>
 </p>
 
-## Key Features
 
-* LivePreview - Make changes, See changes
-  - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* [KaTeX](https://khan.github.io/KaTeX/) Support
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
-  - Write distraction free.
-* Cross platform
-  - Windows, macOS and Linux ready.
+## Description :
 
+* ReversiMasterAI est une intelligence artificielle conçue pour le jeu de Reversi. Cette IA utilise une combinaison de techniques avancées pour optimiser ses performances.
+  
+## Points Forts :
+
+* Minimax avec Élagage Alpha-Beta :
+  - Emploie un algorithme Minimax avec élagage alpha-beta pour évaluer les coups, permettant de réduire considérablement l'espace de recherche tout en trouvant les coups optimaux.
+
+## Heuristiques :
+
+
+* Différence de Pions :
+  - Évalue la différence entre le nombre de pions du joueur et de l'adversaire.
+* Contrôle des Coins :
+  - Accorde une importance particulière à l'occupation des coins, essentiels dans Reversi.
+* Stabilité :
+  - Prise en compte de la stabilité des pions, favorisant ceux difficiles à capturer par l'adversaire.
+* Mobilité :
+  - Évalue le nombre de coups possibles pour augmenter la flexibilité et les options du joueur.
+  
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:

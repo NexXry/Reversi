@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
- <img src="[https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png](https://th.bing.com/th/id/R.3e71c9ddd113c893b0316b8ad532c42a?rik=8posIYXzHdCM5w&riu=http%3a%2f%2fwww.miage.fr%2fwp-content%2fuploads%2f2020%2f11%2fMIAGE_LOGO-SEUL_COULEURS.png&ehk=pg5Kb6Fhe6SPg3kQv9eyJOLaNvnFwA05ltg%2fSQMPb80%3d&risl=&pid=ImgRaw&r=0)" alt="MIAGE" width="200">
+ <img src="https://www.miage.fr/ressources-et-documentation/logos/" alt="MIAGE" width="200">
     <br>
   CASTEX Nicolas & DAVAINE Louis-Amand
     <br>

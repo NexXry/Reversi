@@ -12,7 +12,6 @@
 
 <p align="center">
   <a href="#key-features">Description</a> •
-  <a href="#how-to-use">How To Use</a> •
   <a href="#download">Points Forts</a> •
   <a href="#credits">Heuristiques</a> •
   <a href="#related">Structures de Données</a> •
